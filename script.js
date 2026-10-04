@@ -35,28 +35,32 @@ const navObserver = new IntersectionObserver((entries) => {
 }, {threshold:0.5});
 sections.forEach(s => navObserver.observe(s));
 
-// Global sound gate: autoplay-with-sound is blocked by every browser until
-// the visitor interacts once. This button is that one interaction; after
-// it fires, every video that scrolls into view plays unmuted automatically.
+// Global sound unlock: every browser blocks autoplay-with-sound until the
+// visitor interacts once (hard policy, not something a script can bypass).
+// Instead of a dedicated button, piggyback on whatever the visitor does
+// first on the page (click, tap, key press) — a nav dot, the CV link, the
+// per-video sound toggle, anything — and unmute every video from then on.
 let soundEnabled = false;
-const soundGate = document.getElementById('sound-gate');
 function setCardIcons(card, muted) {
   const iconOn = card.querySelector('.icon-on');
   const iconOff = card.querySelector('.icon-off');
   if (iconOn) iconOn.hidden = muted;
   if (iconOff) iconOff.hidden = !muted;
 }
-soundGate.addEventListener('click', () => {
+function unlockSound() {
+  if (soundEnabled) return;
   soundEnabled = true;
-  soundGate.classList.add('gone');
   document.querySelectorAll('.frame').forEach(card => {
     const video = card.querySelector('video');
-    if (!video) return;
+    if (!video || !video.src) return; // not yet loaded — will unmute on its own intersection
     video.muted = false;
     setCardIcons(card, false);
     video.play().catch(() => {});
   });
-});
+}
+['click', 'touchend', 'keydown'].forEach(evt =>
+  document.addEventListener(evt, unlockSound, {once: true, passive: true})
+);
 
 // Lazy play/pause video when visible, with per-card sound toggle
 const videoCards = document.querySelectorAll('.frame');
