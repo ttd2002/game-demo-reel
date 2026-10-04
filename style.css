@@ -1,0 +1,195 @@
+/* ---- tokens ---- */
+:root{
+  --bg:#0B0E10;
+  --bg-raise:#14181B;
+  --ink:#ECEEEC;
+  --muted:#8C9794;
+  --accent:#4FC3AA;
+  --accent-dim:#2A5048;
+  --rule:#232A2C;
+  --card:#101416;
+  color-scheme: dark;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"Work Sans",system-ui,sans-serif;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+img,video{max-width:100%;display:block}
+a{color:var(--accent)}
+
+::selection{background:var(--accent);color:#06110E}
+
+/* ---- progress bar ---- */
+.progress{
+  position:fixed;top:0;left:0;height:3px;width:0%;
+  background:var(--accent);z-index:60;
+  transition:width .08s linear;
+}
+
+/* ---- dot nav ---- */
+.dotnav{
+  position:fixed;right:22px;top:50%;transform:translateY(-50%);
+  display:flex;flex-direction:column;gap:11px;z-index:50;
+}
+.dotnav a{
+  width:8px;height:8px;border-radius:50%;background:var(--rule);
+  border:1px solid transparent;transition:background .25s,transform .25s;
+}
+.dotnav a.active{background:var(--accent);transform:scale(1.35)}
+@media (max-width:900px){ .dotnav{display:none} }
+
+/* ---- header ---- */
+.topbar{
+  position:fixed;top:0;left:0;right:0;z-index:55;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:16px 24px;backdrop-filter:blur(10px);
+  background:linear-gradient(to bottom, rgba(11,14,16,.85), transparent);
+}
+.topbar .brand{
+  font-family:"Fraunces",serif;font-weight:600;font-size:16px;color:#fff;
+  text-decoration:none;letter-spacing:.01em;
+}
+.topbar .cvlink{
+  font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--muted);text-decoration:none;
+  border:1px solid var(--rule);padding:7px 13px;border-radius:999px;
+  transition:color .2s,border-color .2s;
+}
+.topbar .cvlink:hover{color:var(--accent);border-color:var(--accent-dim)}
+
+/* ---- hero ---- */
+.hero{
+  min-height:92vh;display:flex;flex-direction:column;justify-content:center;
+  padding:140px 7vw 80px;position:relative;overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;inset:-20% -10% auto -10%;height:70%;
+  background:radial-gradient(60% 60% at 30% 20%, var(--accent-dim), transparent 70%);
+  opacity:.55;pointer-events:none;
+}
+.hero .eyebrow{
+  font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--accent);margin:0 0 18px;
+}
+.hero h1{
+  font-family:"Fraunces",serif;font-weight:600;
+  font-size:clamp(2.4rem,6vw,4.6rem);line-height:1.04;margin:0 0 22px;
+  max-width:16ch;text-wrap:balance;color:#fff;
+}
+.hero p{
+  font-size:clamp(1rem,1.6vw,1.2rem);color:var(--muted);max-width:56ch;margin:0 0 34px;
+}
+.hero .stats{display:flex;gap:40px;flex-wrap:wrap}
+.hero .stat b{
+  display:block;font-family:"Fraunces",serif;font-size:2rem;color:#fff;font-weight:600;
+}
+.hero .stat span{
+  font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--muted);
+}
+.scrolldown{
+  position:absolute;bottom:34px;left:7vw;display:flex;align-items:center;gap:10px;
+  font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted);
+}
+.scrolldown .chevrons{display:flex;flex-direction:column;gap:2px}
+.scrolldown svg{animation:bob 1.8s ease-in-out infinite}
+.scrolldown svg:nth-child(2){animation-delay:.2s;opacity:.55}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+
+/* ---- game sections ---- */
+.game{
+  padding:min(14vh,120px) 7vw;
+  border-top:1px solid var(--rule);
+  display:flex;gap:min(6vw,72px);align-items:center;
+}
+.game.reverse{flex-direction:row-reverse}
+.game .media{flex:0 0 42%;min-width:0}
+.game .copy{flex:1 1 auto;min-width:0}
+
+.game .index{
+  font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--accent);
+  letter-spacing:.1em;margin:0 0 10px;
+}
+.game h2{
+  font-family:"Fraunces",serif;font-weight:600;font-size:clamp(1.7rem,3.4vw,2.5rem);
+  margin:0 0 16px;color:#fff;text-wrap:balance;
+}
+.badge{
+  display:inline-flex;align-items:center;gap:6px;
+  font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.08em;
+  text-transform:uppercase;color:#F4C863;border:1px solid #4A3C1E;
+  background:#231C0C;padding:4px 10px;border-radius:999px;margin:0 0 14px;
+}
+.badge::before{content:"";width:6px;height:6px;border-radius:50%;background:#F4C863}
+
+.game .lead{font-size:1.02rem;color:var(--muted);margin:0 0 24px;max-width:52ch}
+
+.feat-grid{
+  list-style:none;margin:0;padding:0;
+  display:grid;grid-template-columns:1fr 1fr;gap:9px 22px;
+}
+.feat-grid li{
+  font-size:13.3px;color:#C7CFCC;line-height:1.45;
+  padding-left:15px;position:relative;
+}
+.feat-grid li::before{
+  content:"";position:absolute;left:0;top:7px;width:5px;height:5px;
+  border-radius:50%;background:var(--accent);
+}
+@media (max-width:760px){
+  .feat-grid{grid-template-columns:1fr}
+}
+
+/* video frame */
+.frame{
+  position:relative;border-radius:14px;overflow:hidden;background:var(--card);
+  border:1px solid var(--rule);box-shadow:0 30px 60px -20px rgba(0,0,0,.6);
+}
+.frame video{width:100%;height:auto;display:block;background:#000}
+.frame .sound{
+  position:absolute;bottom:12px;right:12px;width:34px;height:34px;border-radius:50%;
+  background:rgba(10,12,13,.65);backdrop-filter:blur(6px);
+  border:1px solid rgba(255,255,255,.14);color:#fff;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+}
+.frame .sound svg{width:16px;height:16px}
+
+/* reveal animation */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:translateY(0)}
+.reveal.delay1.in{transition-delay:.08s}
+.reveal.delay2.in{transition-delay:.16s}
+@media (prefers-reduced-motion: reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+  .scrolldown svg{animation:none}
+}
+
+/* ---- footer ---- */
+.footer{
+  padding:90px 7vw 60px;text-align:center;border-top:1px solid var(--rule);
+}
+.footer h3{
+  font-family:"Fraunces",serif;font-size:clamp(1.5rem,3vw,2.1rem);color:#fff;margin:0 0 16px;
+}
+.footer p{color:var(--muted);max-width:50ch;margin:0 auto 26px}
+.footer .links{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.footer a.btn{
+  font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.06em;
+  text-transform:uppercase;text-decoration:none;color:var(--bg);
+  background:var(--accent);padding:12px 22px;border-radius:999px;
+}
+.footer .meta{margin-top:50px;font-size:12px;color:#565E5B;font-family:"IBM Plex Mono",monospace}
+
+@media (max-width:900px){
+  .game, .game.reverse{flex-direction:column}
+  .game .media{flex:none;width:100%}
+}

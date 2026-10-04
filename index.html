@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trần Thanh Đại — Game Demo Reel</title>
+<meta name="description" content="10+ game hyper-casual & midcore tự sản xuất độc lập bởi Trần Thanh Đại, Junior Unity Developer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="progress"></div>
+
+<header class="topbar">
+  <a class="brand" href="#top">Trần Thanh Đại</a>
+  <a class="cvlink" href="https://claude.ai/artifact/Cmz24KDRYum84vKWPeMyEF" target="_blank" rel="noopener">Xem CV ↗</a>
+</header>
+
+<nav class="dotnav" aria-label="Điều hướng game">
+  <a href="#drill-frenzy" class="active"></a>
+  <a href="#nebula-journey"></a>
+  <a href="#bit-bin-jump"></a>
+  <a href="#bluma-shot"></a>
+  <a href="#krush-trisga"></a>
+  <a href="#fillot-clashter"></a>
+  <a href="#merge-of-fates"></a>
+  <a href="#norte-droc"></a>
+  <a href="#kiasth-rosht"></a>
+  <a href="#escape-color-wall-maze"></a>
+</nav>
+
+<main id="top">
+
+  <section class="hero">
+    <p class="eyebrow reveal in">Game Demo Reel</p>
+    <h1 class="reveal in">10 game tự sản xuất, từ ý tưởng tới bản chơi hoàn chỉnh.</h1>
+    <p class="reveal in delay1">Toàn bộ gameplay, UI, kinh tế trong game và vòng lặp cốt lõi dưới đây do một mình tôi thực hiện theo GDD của designer tại PapaGroup, trung bình 1–2 tuần mỗi game. Cuộn xuống xem demo trực tiếp.</p>
+    <div class="stats reveal in delay2">
+      <div class="stat"><b>10+</b><span>Game đã hoàn thành</span></div>
+      <div class="stat"><b>1–2</b><span>Tuần / game</span></div>
+      <div class="stat"><b>1</b><span>Đang closed testing</span></div>
+    </div>
+    <div class="scrolldown">
+      <div class="chevrons">
+        <svg width="14" height="8" viewBox="0 0 14 8" fill="none"><path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <svg width="14" height="8" viewBox="0 0 14 8" fill="none"><path d="M1 1L7 7L13 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </div>
+      Cuộn xuống
+    </div>
+  </section>
+
+  <!-- 01 DRILL FRENZY -->
+  <section class="game" id="drill-frenzy">
+    <div class="media reveal">
+      <div class="frame">
+        <video data-src="videos/01-drill-frenzy.mp4" poster="posters/01-drill-frenzy.jpg" muted loop playsinline></video>
+        <button class="sound" aria-label="Bật/tắt âm thanh">
+          <svg class="icon-off" viewBox="0 0 24 24" fill="none"><path d="M4 9v6h4l5 5V4L8 9H4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          <svg class="icon-on" hidden viewBox="0 0 24 24" fill="none"><path d="M4 9v6h4l5 5V4L8 9H4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M16 8a5 5 0 010 8M19 5a9 9 0 010 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="copy reveal delay1">
+      <p class="index">01 / 10</p>
+      <span class="badge">Đang closed testing — Google Play</span>
+      <h2>Drill Frenzy</h2>
+      <p class="lead">Game hyper-casual một tay: điều khiển máy khoan liên tục khoan xuyên qua tường gạch, giữ chạm để lao xuống và thả ra để nảy lên, vừa né vừa phá để đi được càng xa càng tốt. Bao quanh vòng lặp khoan–nảy đơn giản đó là một hệ sinh thái tiến trình và sưu tập đầy đủ — tiền tệ, thú cưng, rương quà, sự kiện theo mùa, bảng xếp hạng — giữ người chơi quay lại chơi mỗi ngày.</p>
+      <ul class="feat-grid">
+        <li>Vòng lặp khoan xuyên tường gạch liên tục cuộn, giữ để lao xuống, thả để nảy lên</li>
+        <li>Hai loại khối: gạch phá được luôn, đá cứng chỉ phá được khi vào chế độ tăng lực</li>
+        <li>Đập gạch liên tiếp tích combo để mở chế độ tăng lực tạm thời, phá được cả đá cứng</li>
+        <li>Chạm đá cứng ngoài lúc tăng lực sẽ kết thúc lượt chơi ngay</li>
+        <li>Hình ảnh khối gạch đổi theo "bộ chủ đề" sau mỗi chặng, luôn mới trong một lượt chơi</li>
+        <li>Hai loại tiền chính: vàng và kim cương, dùng để mở khóa và nâng cấp</li>
+        <li>Nâng cấp chỉ số máy khoan (tốc độ, lực khoan…) tách riêng hoàn toàn khỏi ngoại hình</li>
+        <li>Sưu tập và đổi skin máy khoan thuần thẩm mỹ, không ảnh hưởng sức mạnh/điểm số</li>
+        <li>Thú cưng đồng hành: mỗi con có kỹ năng chủ động và chỉ số hỗ trợ riêng</li>
+        <li>Trang bị phụ kiện cho thú cưng để tùy biến thêm diện mạo</li>
+        <li>Rương kho báu & chìa khóa, có cơ chế bảo đảm khi xui liên tục chưa trúng đồ hiếm</li>
+        <li>Album sưu tập theo chủ đề, nhận thưởng khi hoàn thành một bộ sưu tập</li>
+        <li>Điểm danh hàng ngày và lịch điểm danh theo tháng kèm thưởng tích lũy</li>
+        <li>Nhiệm vụ ngày/tuần và hệ thống thành tích</li>
+        <li>Bảng xếp hạng điểm cao, thi đua thứ hạng với người chơi khác</li>
+        <li>Sự kiện giới hạn thời gian với minigame phụ riêng biệt và quà theo cấp độ sự kiện</li>
+        <li>Cửa hàng trong game, quảng cáo đổi thưởng, lời nhắc đánh giá ứng dụng đúng lúc</li>
+        <li>Song ngữ Việt – Anh, phản hồi rung (haptics) có thể tắt trong cài đặt</li>
+        <li>Tiến trình chơi được lưu tự động và an toàn</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 02 NEBULA JOURNEY -->
+  <section class="game reverse" id="nebula-journey">
+    <div class="media reveal">
+      <div class="frame">
+        <video data-src="videos/02-nebula-journey.mp4" poster="posters/02-nebula-journey.jpg" muted loop playsinline></video>
+        <button class="sound" aria-label="Bật/tắt âm thanh">
+          <svg class="icon-off" viewBox="0 0 24 24" fill="none"><path d="M4 9v6h4l5 5V4L8 9H4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          <svg class="icon-on" hidden viewBox="0 0 24 24" fill="none"><path d="M4 9v6h4l5 5V4L8 9H4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M16 8a5 5 0 010 8M19 5a9 9 0 010 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="copy reveal delay1">
+      <p class="index">02 / 10</p>
+      <h2>Nebula Journey</h2>
+      <p class="lead">Arcade vũ trụ nhịp độ nhanh: điều khiển tàu bay lượn vòng trên các quỹ đạo nhiều hình dạng lạ mắt, một chạm để đổi hướng, vừa né đạn vừa thu thập năng lượng để qua màn. Độ khó tăng theo thời gian sống sót, buộc phản xạ ngày càng nhanh và chính xác.</p>
+      <ul class="feat-grid">
+        <li>Bay theo quỹ đạo khép kín, chạm màn hình để đổi chiều quay, né đạn và gom vật phẩm để qua màn</li>
+        <li>Quỹ đạo đa hình dạng: tròn, tam giác, vuông, kim cương, trái tim, ngôi sao, vô cực, elip...</li>
+        <li>Độ khó tăng dần không giới hạn: tốc độ quay, tốc độ bắn, số kẻ địch cùng lúc</li>
+        <li>Kẻ địch cảnh báo trước khi bắn, có thể bắn nhiều hướng và dự đoán hướng người chơi</li>
+        <li>Thu thập vật phẩm trong màn để tích lũy tiền xuyên suốt các lượt chơi</li>
+        <li>Cửa hàng & tùy biến: mở khóa và trang bị nhiều mẫu tàu/nhân vật bằng tiền đã kiếm</li>
+        <li>Mua khiên bảo vệ trước trận để được "cứu" một lần khi va trúng đạn</li>
+        <li>Lưu tiến trình dài hạn: ghi nhận màn chơi xa nhất từng đạt được</li>
+        <li>Màn tổng kết sau mỗi lượt, hiệu ứng đếm số tiền kiếm được</li>
+        <li>Hướng dẫn chơi cho người mới, tạm dừng/tiếp tục bất cứ lúc nào</li>
+        <li>Tùy chọn bật/tắt âm thanh, nhạc nền</li>
+        <li>Hiệu ứng hình ảnh và âm thanh sống động cho từng hành động</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 03 BIT BIN JUMP -->
+  <section class="game" id="bit-bin-jump">
+    <div class="media reveal">
+      <div class="frame">
+        <video data-src="videos/03-bit-bin-jump.mp4" poster="posters/03-bit-bin-jump.jpg" muted loop playsinline></video>
+        <button class="sound" aria-label="Bật/tắt âm thanh">
+          <svg class="icon-off" viewBox="0 0 24 24" fill="none"><path d="M4 9v6h4l5 5V4L8 9H4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          <svg class="icon-on" hidden viewBox="0 0 24 24" fill="none"><path d="M4 9v6h4l5 5V4L8 9H4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M16 8a5 5 0 010 8M19 5a9 9 0 010 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="copy reveal delay1">
+      <p class="index">03 / 10</p>
+      <h2>Bit Bin Jump</h2>
+      <p class="lead">Game nhảy bục vô tận: ngắm hướng, đo lực bằng thanh năng lượng dao động, rồi bung người nhảy để đáp đúng tâm bục ghi điểm cao hơn. Càng lên cao bục càng khó và đa dạng hơn, trong một đường đua không có điểm kết — chỉ dừng khi một bước nhảy đi sai.</p>
+      <ul class="feat-grid">
+        <li>Điều khiển một chạm: kéo chọn hướng, thả đúng lúc thanh lực dao động để quyết định sức bật</li>
+        <li>Đường bay dự đoán hiện ngay khi ngắm, kèm vòng tròn báo điểm rơi</li>
+        <li>Thế giới bục nhảy sinh ngẫu nhiên vô tận, độ khó tăng theo quãng đường</li>
+        <li>Nhiều loại bục: đứng yên, trượt ngang, trượt lên xuống, nhô lên hạ xuống liên tục</li>
+        <li>Chướng ngại vật cản đường, va vào sẽ bật ngược lại và rơi nhanh hơn</li>
+        <li>Chấm điểm theo độ chính xác: đáp trúng tâm bục được điểm cao hơn đáp ở mép</li>
+        <li>Rơi khỏi màn hình kết thúc lượt chơi, hiện màn tổng kết điểm số</li>
+        <li>Điểm số mỗi lượt quy đổi thành tiền trong game khi kết thúc</li>
+        <li>Cửa hàng nhân vật: xoay xem, mua và trang bị bằng tiền đã kiếm được</li>
+        <li>Lưu tiến trình người chơi giữa các lần chơi</li>
+        <li>Màn hướng dẫn cho người mới, tạm dừng/chơi lại/về menu bất cứ lúc nào</li>
+        <li>Nhạc nền và hiệu ứng âm thanh riêng cho từng hành động</li>
+        <li>Hiệu ứng hình ảnh và rung camera khi nhảy, đáp đất, ghi điểm</li>
+        <li>Camera điện ảnh dẫn vào trận khi bắt đầu lượt chơi mới</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 04 BLUMA SHOT -->
+  <section class="game reverse" id="bluma-shot">
+    <div class="media reveal">
+      <div class="frame">
+        <video data-src="videos/04-bluma-shot.mp4" poster="posters/04-bluma-shot.jpg" muted loop playsinline></video>
+        <button class="sound" aria-label="Bật/tắt âm thanh">
+          <svg class="icon-off" viewBox="0 0 24 24" fill="none"><path d="M4 9v6h4l5 5V4L8 9H4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          <svg class="icon-on" hidden viewBox="0 0 24 24" fill="none"><path d="M4 9v6h4l5 5V4L8 9H4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M16 8a5 5 0 010 8M19 5a9 9 0 010 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="copy reveal delay1">
+      <p class="index">04 / 10</p>
+      <h2>Bluma Shot</h2>
+      <p class="lead">Vòng xoay mục tiêu bắn phá: nhắm và bắn để phá từng mảnh gạch trên vòng xoay quay liên tục trước khi hết đạn, vừa né bom vừa gom tiền để mở khóa và nâng cấp nhân vật. Độ khó tăng dần qua từng màn, đòi hỏi tính toán đường bắn chính xác.</p>
+      <ul class="feat-grid">
+        <li>Nhắm, bắn phá sạch gạch trên vòng xoay trước khi hết đạn để qua màn</li>
+        <li>Đạn giới hạn theo từng màn, buộc bắn chính xác và tiết kiệm</li>
+        <li>Vòng mục tiêu tự xoay liên tục, tạo thử thách căn thời điểm bắn</li>
+        <li>Bom cài trên vòng xoay: trúng bom mà không có khiên sẽ kết thúc lượt chơi ngay</li>
+        <li>Cơ chế "lỗ xuyên": bắn trúng lỗ cho đạn xuyên qua vòng ngoài một lần</li>
+        <li>Vật phẩm hỗ trợ theo định kỳ: khiên chống bom, thỏi tiền thưởng thêm</li>
+        <li>Phá gạch rơi ra tiền, hiệu ứng tiền bay đẹp mắt về khung điểm</li>
+        <li>Thu thập & trang bị nhân vật/vũ khí, mỗi mẫu có hiệu ứng bắn và âm thanh riêng</li>
+        <li>Tiến trình vô hạn: số đạn, gạch, bom tăng dần theo từng màn</li>
+        <li>Màn tổng kết sau mỗi lượt, chơi lại ngay hoặc về menu</li>
+        <li>Tạm dừng, tiếp tục, chơi lại giữa trận; hướng dẫn cho người mới</li>
+        <li>Lưu tiến trình và cài đặt giữa các lần chơi</li>
+        <li>Hiệu ứng hình ảnh và âm thanh cho từng hành động: bắn, nổ, phá gạch, nhặt đồ</li>
+        <li>Chuyển cảnh mượt mà giữa menu chọn nhân vật và màn chơi chính</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 05 KRUSH TRISGA -->
+  <section class="game" id="krush-trisga">
+    <div class="media reveal">
+      <div class="frame">
+        <video data-src="videos/05-krush-trisga.mp4" poster="posters/05-krush-trisga.jpg" muted loop playsinline></video>
+        <button class="sound" aria-label="Bật/tắt âm thanh">
+          <svg class="icon-off" viewBox="0 0 24 24" fill="none"><path d="M4 9v6h4l5 5V4L8 9H4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          <svg class="icon-on" hidden viewBox="0 0 24 24" fill="none"><path d="M4 9v6h4l5 5V4L8 9H4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M16 8a5 5 0 010 8M19 5a9 9 0 010 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="copy reveal delay1">
+      <p class="index">05 / 10</p>
+      <h2>Krush Trisga</h2>
+      <p class="lead">Chạy đường vô tận: liên tục đổi hình khối của nhân vật để lọt đúng qua từng cổng chướng ngại vật khớp hình, vừa né va chạm vừa ghi điểm thật cao. Đường chạy sinh ngẫu nhiên không điểm kết, càng đi xa thử thách càng dồn dập.</p>
+      <ul class="feat-grid">
+        <li>Chạm nút để đổi hình khối (vuông/chữ nhật/tròn) khớp với cổng chướng ngại sắp tới</li>
+        <li>Đường đua sinh ngẫu nhiên vô tận, có khúc cua bất ngờ, camera xoay theo hướng rẽ</li>
+        <li>Độ khó tăng theo điểm số: chướng ngại xuất hiện thành cụm liên tiếp dày hơn</li>
+        <li>Ghi điểm khi vượt đúng hình; va chạm sai hình kết thúc lượt chơi ngay</li>
+        <li>Lưu điểm cao nhất (kỷ lục cá nhân) qua các lượt chơi</li>
+        <li>Thu thập xu trong mỗi lượt chơi, tích lũy và lưu trữ lâu dài</li>
+        <li>Sưu tập & tùy biến: mở khóa và trang bị nhân vật bằng xu đã kiếm</li>
+        <li>Hiệu ứng hình ảnh rực rỡ khi vượt chướng ngại thành công và khi va chạm</li>
+        <li>Hiệu ứng xuất hiện ấn tượng cho nhân vật mỗi khi bắt đầu lượt chơi</li>
+        <li>Màn kết thúc với điểm số chạy số tăng dần, chơi lại ngay hoặc về menu</li>
+        <li>Menu chính hiển thị điểm cao nhất, hướng dẫn chơi cho người mới</li>
+        <li>Tạm dừng và tiếp tục lượt chơi bất cứ lúc nào</li>
+        <li>Âm thanh và nhạc nền bật/tắt được, trạng thái ghi nhớ giữa các lần chơi</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 06 FILLOT CLASHTER -->
+  <section class="game reverse" id="fillot-clashter">
+    <div class="media reveal">
+      <div class="frame">
+        <video data-src="videos/06-fillot-clashter.mp4" poster="posters/06-fillot-clashter.jpg" muted loop playsinline></video>
+        <button class="sound" aria-label="Bật/tắt âm thanh">
+          <svg class="icon-off" viewBox="0 0 24 24" fill="none"><path d="M4 9v6h4l5 5V4L8 9H4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          <svg class="icon-on" hidden viewBox="0 0 24 24" fill="none"><path d="M4 9v6h4l5 5V4L8 9H4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M16 8a5 5 0 010 8M19 5a9 9 0 010 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="copy reveal delay1">
+      <p class="index">06 / 10</p>
+      <h2>Fillot Clashter</h2>
+      <p class="lead">Hành động phòng thủ góc nhìn từ trên: đứng giữa đấu trường, bắn hạ quái vật ùa tới từ bốn phía trước khi chúng áp sát. Càng trụ lâu, quái xuất hiện càng dồn dập, đòi hỏi phản xạ nhanh và chính xác để giữ mạng.</p>
+      <ul class="feat-grid">
+        <li>Xoay người bắn theo 4 hướng để hạ quái tiếp cận từ mọi phía quanh nhân vật</li>
+        <li>Độ khó tăng theo điểm số: quái xuất hiện nhanh hơn, tồn tại ngắn hơn về cuối trận</li>
+        <li>Hệ thống mạng sống: mất mạng khi quái chạm tới hoặc bắn hụt, hết mạng kết thúc trận</li>
+        <li>Thu thập tiền trong trận: đồng xu xoay tròn thay quái, bắn trúng để gom tiền</li>
+        <li>Cửa hàng & tùy biến nhân vật, xem trước mô hình trực tiếp trong cửa hàng</li>
+        <li>Ghi nhận điểm cao nhất và tổng tiền đã kiếm được qua các lượt chơi</li>
+        <li>Lưu tiến trình cục bộ: tiền, nhân vật, cài đặt âm thanh giữa các lần chơi</li>
+        <li>Màn hướng dẫn, tạm dừng giữa trận, màn kết thúc với hiệu ứng đếm số</li>
+        <li>Hiệu ứng hình ảnh và âm thanh phản hồi tức thì khi bắn, trúng quái, mất mạng</li>
+        <li>Camera chuyển cảnh mượt mà khi bắt đầu mỗi trận mới</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 07 MERGE OF FATES -->
+  <section class="game" id="merge-of-fates">
+    <div class="media reveal">
+      <div class="frame">
+        <video data-src="videos/07-merge-of-fate.mp4" poster="posters/07-merge-of-fate.jpg" muted loop playsinline></video>
+        <button class="sound" aria-label="Bật/tắt âm thanh">
+          <svg class="icon-off" viewBox="0 0 24 24" fill="none"><path d="M4 9v6h4l5 5V4L8 9H4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          <svg class="icon-on" hidden viewBox="0 0 24 24" fill="none"><path d="M4 9v6h4l5 5V4L8 9H4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M16 8a5 5 0 010 8M19 5a9 9 0 010 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="copy reveal delay1">
+      <p class="index">07 / 10</p>
+      <h2>Merge of Fates</h2>
+      <p class="lead">Chiến thuật kết hợp merge và đấu tướng tự động: dùng vàng mỗi lượt để mua quân, ghép 3 đơn vị giống nhau để nâng cấp sức mạnh, sắp xếp đội hình rồi để chiến binh tự động giao tranh qua từng màn ngày càng khó. Càng đi xa càng nhận thưởng lớn và mở khóa thêm tướng mới.</p>
+      <ul class="feat-grid">
+        <li>Vòng lặp cốt lõi: mua quân – ghép hợp nhất – xếp trận – tự động chiến đấu theo từng màn</li>
+        <li>Hệ thống ghép hạng sao: hợp nhất 3 đơn vị cùng loại để nâng sao, hình dáng & sức mạnh đổi rõ</li>
+        <li>Hai lớp tiền tệ: vàng mua quân trong mỗi ván, tiền/kim cương tích lũy dài hạn để mở khóa</li>
+        <li>Sưu tập & mở khóa nhiều tướng, phân cấp độ hiếm khác nhau, chọn tướng khởi đầu</li>
+        <li>Chiến đấu tự động: mỗi đơn vị tự tìm địch gần nhất, đánh theo tầm/tốc độ/sát thương riêng</li>
+        <li>Nhiều màn nối tiếp với độ khó tăng dần, có dải màn "khó" riêng ở giai đoạn sau</li>
+        <li>Bản đồ và bối cảnh trận đấu chọn ngẫu nhiên, tạo cảm giác mới mỗi lượt chơi</li>
+        <li>Thưởng theo kết quả: thắng màn nhận tiền thưởng, thua vẫn được an ủi một phần</li>
+        <li>Tùy chỉnh tốc độ trận đấu x1/x2/x3 để xem combat nhanh hơn</li>
+        <li>Hướng dẫn dẫn dắt người mới qua từng bước: mua quân, xếp trận, giao tranh, ghép nâng cấp</li>
+        <li>Tạm dừng/tiếp tục trận, màn kết thúc ván với hiệu ứng tổng kết tiền kiếm được</li>
+        <li>Lưu tiến trình: tiền tích lũy, nhân vật sở hữu, cài đặt âm thanh, tiến độ hướng dẫn</li>
+        <li>Hiệu ứng hình ảnh và âm thanh sống động cho merge và các tương tác trong trận</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 08 NORTE DROC -->
+  <section class="game reverse" id="norte-droc">
+    <div class="media reveal">
+      <div class="frame">
+        <video data-src="videos/08-norte-droc.mp4" poster="posters/08-norte-droc.jpg" muted loop playsinline></video>
+        <button class="sound" aria-label="Bật/tắt âm thanh">
+          <svg class="icon-off" viewBox="0 0 24 24" fill="none"><path d="M4 9v6h4l5 5V4L8 9H4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          <svg class="icon-on" hidden viewBox="0 0 24 24" fill="none"><path d="M4 9v6h4l5 5V4L8 9H4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M16 8a5 5 0 010 8M19 5a9 9 0 010 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="copy reveal delay1">
+      <p class="index">08 / 10</p>
+      <h2>Norte Droc</h2>
+      <p class="lead">Mô phỏng quản lý phòng khám đa khoa, lối chơi thư giãn: xây dựng, mở rộng và vận hành một bệnh viện ngày càng đông khách. Bệnh nhân tự tìm đến, xếp hàng chờ khám; người chơi mở khóa, nâng cấp các phòng khám để phục vụ nhanh hơn và thu nhiều tiền hơn.</p>
+      <ul class="feat-grid">
+        <li>Bệnh nhân tự di chuyển, xếp hàng, vào phòng khám, điều trị rồi rời viện theo thời gian thực</li>
+        <li>Hệ thống đa khoa: 8 loại phòng khám (Tổng quát, Xương khớp, Răng, Mắt, Phẫu thuật, Tim mạch, Nhi khoa, Cấp cứu)</li>
+        <li>Mở khóa từng phòng khám mới bằng tiền kiếm được trong game</li>
+        <li>Nâng cấp phòng khám để tăng tốc độ khám, số bệnh nhân phục vụ cùng lúc và doanh thu</li>
+        <li>Kinh tế cân bằng: chi phí và doanh thu tăng dần theo từng màn, càng chơi càng khó</li>
+        <li>Mục tiêu theo màn: thu đủ số tiền yêu cầu để bước sang màn kế tiếp</li>
+        <li>Hai giai đoạn: các màn đầu thiết kế sẵn, sau đó chuyển sang chế độ vô tận random bản đồ</li>
+        <li>Thanh đo sự hài lòng: để bệnh nhân chờ quá lâu sẽ bực tức, đầy thanh là thua màn</li>
+        <li>Tăng tốc độ game x1/x2/x3 để rút ngắn thời gian chờ</li>
+        <li>Camera kéo-thả và zoom tự do để quan sát toàn cảnh bệnh viện</li>
+        <li>Lưu tiến trình, tự động tiếp tục từ màn cao nhất đã đạt được</li>
+        <li>Tùy chỉnh âm thanh, hiển thị khung hình/FPS; hướng dẫn cho người mới</li>
+        <li>Màn kết quả khi thắng/thua kèm thống kê doanh thu, chơi lại hoặc tiếp tục</li>
+        <li>Hiệu ứng hình ảnh sống động: tiền bay khi thu ngân, mở khóa và nâng cấp phòng</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 09 KIASTH ROSHT -->
+  <section class="game" id="kiasth-rosht">
+    <div class="media reveal">
+      <div class="frame">
+        <video data-src="videos/09-kiasth-rosht.mp4" poster="posters/09-kiasth-rosht.jpg" muted loop playsinline></video>
+        <button class="sound" aria-label="Bật/tắt âm thanh">
+          <svg class="icon-off" viewBox="0 0 24 24" fill="none"><path d="M4 9v6h4l5 5V4L8 9H4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          <svg class="icon-on" hidden viewBox="0 0 24 24" fill="none"><path d="M4 9v6h4l5 5V4L8 9H4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M16 8a5 5 0 010 8M19 5a9 9 0 010 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="copy reveal delay1">
+      <p class="index">09 / 10</p>
+      <h2>Kiasth Rosht</h2>
+      <p class="lead">Bắn súng góc nhìn thứ nhất theo lượt: luân phiên giữa lượt tấn công và lượt phòng thủ để sống sót qua từng màn chơi trong bối cảnh cyberpunk về đêm. Chủ động nâng cấp vũ khí, khiên chắn và tích lũy tiền thưởng để ngày càng mạnh hơn.</p>
+      <ul class="feat-grid">
+        <li>Lượt của bạn để ngắm bắn kẻ địch, lượt của địch để né đạn bằng khiên chắn</li>
+        <li>Ngắm bắn bằng joystick, có la bàn chỉ hướng đạn và hiệu ứng giật nảy khi bắn</li>
+        <li>Điểm yếu trên cơ thể kẻ địch gây sát thương chí mạng khi bắn trúng</li>
+        <li>Cảnh báo hướng tấn công của địch trước khi khai hỏa, giúp phản ứng kịp</li>
+        <li>Kẻ địch đa dạng chủng loại, đổi tư thế đứng/ngồi linh hoạt để tăng độ khó né bắn</li>
+        <li>Khiên chắn di chuyển theo hướng để đỡ đòn, giảm phần trăm sát thương nhận vào</li>
+        <li>Nâng cấp khiên chắn nhiều cấp độ để tăng khả năng phòng thủ</li>
+        <li>Sưu tập nhiều loại súng, mỗi loại có sát thương, tốc độ bắn, dung lượng đạn riêng</li>
+        <li>Mở khóa và nâng cấp súng bằng tiền thưởng, có thể reset để nhận hoàn tiền</li>
+        <li>Tiêu diệt kẻ địch để thu tiền, hiệu ứng tiền bay về khi thu thập</li>
+        <li>Chuỗi màn nối tiếp với môi trường thay đổi liên tục, chuyển cảnh camera điện ảnh</li>
+        <li>Lưu tiến trình: màn cao nhất, cấp độ vũ khí/khiên chắn, tiền hiện có</li>
+        <li>Hướng dẫn chơi cho người mới, màn tổng kết sau mỗi trận</li>
+        <li>Tùy chọn âm thanh, tốc độ khung hình, hiện/ẩn FPS; tạm dừng/chơi lại</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 10 ESCAPE COLOR WALL MAZE -->
+  <section class="game reverse" id="escape-color-wall-maze">
+    <div class="media reveal">
+      <div class="frame">
+        <video data-src="videos/10-escape-color-wall-maze.mp4" poster="posters/10-escape-color-wall-maze.jpg" muted loop playsinline></video>
+        <button class="sound" aria-label="Bật/tắt âm thanh">
+          <svg class="icon-off" viewBox="0 0 24 24" fill="none"><path d="M4 9v6h4l5 5V4L8 9H4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          <svg class="icon-on" hidden viewBox="0 0 24 24" fill="none"><path d="M4 9v6h4l5 5V4L8 9H4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M16 8a5 5 0 010 8M19 5a9 9 0 010 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="copy reveal delay1">
+      <p class="index">10 / 10</p>
+      <h2>Escape Color Wall Maze</h2>
+      <p class="lead">Endless runner "đọc màu": lao về phía trước và chọn đúng ô có màu trùng với màu nhân vật đang mang (hoặc tìm lối thấp để nhảy qua) để phá tường ghi điểm — chọn sai sẽ bị cản lại và rơi khỏi đường chạy. Tốc độ tăng dần, xen vào đó là những pha "Challenge" đầy áp lực.</p>
+      <ul class="feat-grid">
+        <li>Chạy liên tục, né/phá tường theo đúng màu để qua cửa, sai màu bị chặn và rơi khỏi map</li>
+        <li>Màu "thông hành" đổi ngẫu nhiên sau mỗi lần vượt tường, buộc quan sát liên tục</li>
+        <li>Đa dạng kiểu tường: nguyên khối chạy ngang, chia ba đoạn ép vào nhau, cột thấp để nhảy qua</li>
+        <li>Hệ thống thể lực & chạy nước rút: giữ nút để tăng tốc, thể lực hồi phục khi nghỉ</li>
+        <li>Hệ thống nhảy qua cột thấp hoặc chướng ngại vật</li>
+        <li>Độ khó tăng theo thời gian: tường rơi nhanh hơn, thời gian nghỉ ngắn dần</li>
+        <li>Pha thách thức (Challenge Phase) định kỳ: tốc độ tường tăng vọt trong thời gian ngắn</li>
+        <li>Thu thập kim cương rải trên đường chạy, cộng dồn và lưu lại sau mỗi lượt</li>
+        <li>Vật phẩm hỗ trợ tạm thời: đồng hồ làm chậm tường, tàng hình xuyên tường, nam châm hút kim cương</li>
+        <li>Bộ sưu tập nhân vật, mỗi nhân vật có tốc độ chạy và kỹ năng thụ động riêng</li>
+        <li>Mua & trang bị nhân vật bằng kim cương đã tích lũy</li>
+        <li>Lưu tiến trình: điểm cao nhất, kim cương, nhân vật sở hữu, cài đặt âm thanh</li>
+        <li>Hướng dẫn chơi, màn kết thúc với hiệu ứng đếm điểm/kim cương, tạm dừng/tiếp tục</li>
+        <li>Nhạc nền đổi theo trạng thái chơi thường và pha thách thức</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <h3>Xem đầy đủ hồ sơ</h3>
+    <p>Chi tiết kinh nghiệm làm việc, kỹ năng và các dự án production tại PapaGroup (Aquex, Draw Adventure, Bộ Lạc Đậu Phộng) có trong CV đầy đủ.</p>
+    <div class="links">
+      <a class="btn" href="https://claude.ai/artifact/Cmz24KDRYum84vKWPeMyEF" target="_blank" rel="noopener">Xem CV</a>
+      <a class="btn" href="mailto:thanhdai912@gmail.com">thanhdai912@gmail.com</a>
+    </div>
+    <p class="meta">Trần Thanh Đại — Junior Unity Developer</p>
+  </footer>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
