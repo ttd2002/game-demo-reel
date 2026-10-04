@@ -35,6 +35,29 @@ const navObserver = new IntersectionObserver((entries) => {
 }, {threshold:0.5});
 sections.forEach(s => navObserver.observe(s));
 
+// Global sound gate: autoplay-with-sound is blocked by every browser until
+// the visitor interacts once. This button is that one interaction; after
+// it fires, every video that scrolls into view plays unmuted automatically.
+let soundEnabled = false;
+const soundGate = document.getElementById('sound-gate');
+function setCardIcons(card, muted) {
+  const iconOn = card.querySelector('.icon-on');
+  const iconOff = card.querySelector('.icon-off');
+  if (iconOn) iconOn.hidden = muted;
+  if (iconOff) iconOff.hidden = !muted;
+}
+soundGate.addEventListener('click', () => {
+  soundEnabled = true;
+  soundGate.classList.add('gone');
+  document.querySelectorAll('.frame').forEach(card => {
+    const video = card.querySelector('video');
+    if (!video) return;
+    video.muted = false;
+    setCardIcons(card, false);
+    video.play().catch(() => {});
+  });
+});
+
 // Lazy play/pause video when visible, with per-card sound toggle
 const videoCards = document.querySelectorAll('.frame');
 const videoObserver = new IntersectionObserver((entries) => {
@@ -45,8 +68,13 @@ const videoObserver = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       if (!video.src && video.dataset.src) {
         video.src = video.dataset.src;
+        video.muted = !soundEnabled;
+        setCardIcons(card, video.muted);
       }
-      video.play().catch(() => {});
+      video.play().catch(() => {
+        // Autoplay with sound was refused (gate not used this session yet) — fall back to muted.
+        if (!video.muted) { video.muted = true; setCardIcons(card, true); video.play().catch(() => {}); }
+      });
     } else {
       video.pause();
     }
@@ -58,11 +86,8 @@ videoCards.forEach(card => {
   const video = card.querySelector('video');
   const btn = card.querySelector('.sound');
   if (!video || !btn) return;
-  const iconOn = btn.querySelector('.icon-on');
-  const iconOff = btn.querySelector('.icon-off');
   btn.addEventListener('click', () => {
     video.muted = !video.muted;
-    iconOn.hidden = video.muted;
-    iconOff.hidden = !video.muted;
+    setCardIcons(card, video.muted);
   });
 });
